@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ॐ Shreenath Developers | Civil Engineering & Construction</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    color:#222;
+    background:#f7f7f7;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#111;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#f5a623;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+nav ul li a:hover{
+    color:#f5a623;
+}
+
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#f5a623;
+    color:#111;
+    padding:13px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
+
+.btn:hover{
+    background:white;
+}
+
+section{
+    padding:70px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#666;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-box{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-text h3{
+    font-size:29px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+    color:#555;
+    font-size:17px;
+}
+
+/* SERVICES */
+
+.services{
+    background:#f1f1f1;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    margin-bottom:10px;
+}
+
+/* PROJECTS */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.project-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.project-card div{
+    padding:20px;
+}
+
+.project-card h3{
+    margin-bottom:8px;
+}
+
+/* WHY US */
+
+.why{
+    background:#f1f1f1;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.why-card{
+    padding:25px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.why-card h3{
+    margin:12px 0;
+}
+
+/* ENQUIRY */
+
+.enquiry{
+    background:#111;
+    color:white;
+}
+
+.form{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    color:#222;
+}
+
+.form input,
+.form select,
+.form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+.form textarea{
+    height:120px;
+    resize:none;
+}
+
+.form button{
+    width:100%;
+    padding:14px;
+    background:#f5a623;
+    border:none;
+    border-radius:5px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+    background:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    text-align:center;
+}
+
+.contact-card{
+    padding:30px;
+    background:#f5f5f5;
+    border-radius:10px;
+}
+
+.contact-card .icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer span{
+    color:#f5a623;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav ul{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .service-grid,
+    .project-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .service-grid,
+    .project-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .title h2{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        ॐ Shreenath <span>Developers</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#enquiry">Enquiry</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>ॐ Shreenath Developers</h1>
+
+        <p>
+            Building Dreams With Quality, Precision & Trust
+        </p>
+
+        <a href="#enquiry" class="btn">
+            Get a Quote
+        </a>
+
+        <a href="#projects" class="btn">
+            View Projects
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="title">
+
+        <h2>About Us</h2>
+
+        <p>
+            Professional Construction & Civil Engineering Services
+        </p>
+
+    </div>
+
+    <div class="about-box">
+
+        <div class="about-text">
+
+            <h3>Quality Construction. Trusted Work.</h3>
+
+            <p>
+                Welcome to <b>ॐ Shreenath Developers</b>.
+                We provide professional construction and civil
+                engineering services with a focus on quality,
+                planning and customer satisfaction.
+            </p>
+
+            <br>
+
+            <p>
+                With more than <b>12 years of experience</b>,
+                we undertake different types of construction
+                and civil works according to project requirements.
+            </p>
+
+            <br>
+
+            <p>
+                Our current work includes
+                <b>Apartment Construction</b> and other
+                residential and building projects.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="title">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Complete Construction & Civil Engineering Solutions
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <div class="icon">🏠</div>
+
+            <h3>House Construction</h3>
+
+            <p>
+                Complete residential construction services.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🏢</div>
+
+            <h3>Apartment Construction</h3>
+
+            <p>
+                Construction work for residential apartment projects.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🏗️</div>
+
+            <h3>Building Construction</h3>
+
+            <p>
+                Professional building construction solutions.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">📐</div>
+
+            <h3>Building Planning</h3>
+
+            <p>
+                Planning and construction solutions for buildings.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">📋</div>
+
+            <h3>Estimation & Costing</h3>
+
+            <p>
+                Project estimation and construction costing.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">👷</div>
+
+            <h3>Site Supervision</h3>
+
+            <p>
+                Professional supervision of construction work.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🧱</div>
+
+            <h3>Civil Work</h3>
+
+            <p>
+                Complete civil construction and related works.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🏘️</div>
+
+            <h3>Residential Projects</h3>
+
+            <p>
+                Quality solutions for residential projects.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🔨</div>
+
+            <h3>Renovation Work</h3>
+
+            <p>
+                Renovation and improvement of existing structures.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="title">
+
+        <h2>Our Projects</h2>
+
+        <p>
+            Construction work and ongoing projects
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <div class="project-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80">
+
+            <div>
+
+                <h3>Apartment Construction</h3>
+
+                <p>
+                    Ongoing residential apartment construction work.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+
+            <div>
+
+                <h3>Residential Building</h3>
+
+                <p>
+                    Residential construction project.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
+
+            <div>
+
+                <h3>Modern Home Project</h3>
+
+                <p>
+                    Modern residential construction work.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section class="why">
+
+    <div class="title">
+
+        <h2>Why Choose Us?</h2>
+
+        <p>
+            A trusted construction partner
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="icon">⭐</div>
+
+            <h3>Quality Work</h3>
+
+            <p>
+                We focus on quality and proper workmanship.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">🏆</div>
+
+            <h3>12+ Years Experience</h3>
+
+            <p>
+                More than 12 years of construction experience.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">⏱️</div>
+
+            <h3>Timely Work</h3>
+
+            <p>
+                We value project timelines and commitments.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">🤝</div>
+
+            <h3>Trusted Service</h3>
+
+            <p>
+                Customer satisfaction is our priority.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ENQUIRY -->
+
+<section class="enquiry" id="enquiry">
+
+    <div class="title">
+
+        <h2>Project Enquiry</h2>
+
+        <p>
+            Tell us about your construction project
+        </p>
+
+    </div>
+
+
+    <form class="form" onsubmit="sendEnquiry(event)">
+
+
+        <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+
+        <input
+        type="tel"
+        id="mobile"
+        placeholder="Mobile Number"
+        required>
+
+
+        <select id="projectType" required>
+
+            <option value="">
+                Select Project Type
+            </option>
+
+            <option>House Construction</option>
+
+            <option>Apartment Construction</option>
+
+            <option>Building Construction</option>
+
+            <option>Building Planning</option>
+
+            <option>Civil Work</option>
+
+            <option>Estimation & Costing</option>
+
+            <option>Site Supervision</option>
+
+            <option>Renovation Work</option>
+
+        </select>
+
+
+        <input
+        type="text"
+        id="location"
+        placeholder="Project Location"
+        required>
+
+
+        <input
+        type="text"
+        id="budget"
+        placeholder="Approximate Budget">
+
+
+        <textarea
+        id="message"
+        placeholder="Tell us about your project">
+        </textarea>
+
+
+        <button type="submit">
+            Send Enquiry on WhatsApp
+        </button>
+
+
+    </form>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="title">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Let's discuss your project
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <div class="icon">👷</div>
+
+            <h3>Owner</h3>
+
+            <p>
+                Sambhaji Madane
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div class="icon">📞</div>
+
+            <h3>Call / WhatsApp</h3>
+
+            <p>
+                +91 88302 70043
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div class="icon">🏢</div>
+
+            <h3>Company</h3>
+
+            <p>
+                ॐ Shreenath Developers
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026
+        <span>ॐ Shreenath Developers</span>.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP BUTTON -->
+
+<a
+class="whatsapp"
+href="https://wa.me/918830270043"
+target="_blank">
+
+    💬
+
+</a>
+
+
+<script>
+
+function sendEnquiry(event){
+
+    event.preventDefault();
+
+
+    let name =
+    document.getElementById("name").value;
+
+
+    let mobile =
+    document.getElementById("mobile").value;
+
+
+    let project =
+    document.getElementById("projectType").value;
+
+
+    let location =
+    document.getElementById("location").value;
+
+
+    let budget =
+    document.getElementById("budget").value;
+
+
+    let message =
+    document.getElementById("message").value;
+
+
+    let whatsappNumber =
+    "918830270043";
+
+
+    let text =
+    "🏗️ *NEW PROJECT ENQUIRY*%0A%0A" +
+
+    "👤 Name: " + encodeURIComponent(name) + "%0A" +
+
+    "📞 Mobile: " + encodeURIComponent(mobile) + "%0A" +
+
+    "🏠 Project: " + encodeURIComponent(project) + "%0A" +
+
+    "📍 Location: " + encodeURIComponent(location) + "%0A" +
+
+    "💰 Budget: " + encodeURIComponent(budget) + "%0A" +
+
+    "📝 Message: " + encodeURIComponent(message);
+
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        text,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
