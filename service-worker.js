@@ -1,4 +1,4 @@
-const CACHE_NAME = "shreenath-developers-v1";
+const CACHE_NAME = "shreenath-developers-v2";
 
 const FILES_TO_CACHE = [
     "./",
